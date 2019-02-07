@@ -11,23 +11,24 @@ const TODO_LIST = [
   }
 ];
 
-exports.seed = async function (knex) {
-  await knex(USERS).insert([
-    {
-      username: "pentti",
-      name: "Pentti",
-      lastName: "Placeholder"
-    }, {
-      username: "milla",
-      name: "Milla",
-      lastName: "Mallikas"
-    }, {
-      username: "kaija",
-      name: "Kaija",
-      lastName: "Koodari"
-    }
-  ]);
+const USER_LIST = [
+  {
+    username: "pentti",
+    name: "Pentti",
+    lastName: "Placeholder"
+  }, {
+    username: "milla",
+    name: "Milla",
+    lastName: "Mallikas"
+  }, {
+    username: "kaija",
+    name: "Kaija",
+    lastName: "Koodari"
+  }
+];
 
+exports.seed = async function (knex) {
+  await knex(USERS).insert(USER_LIST);
   const users = await knex(USERS).select('*')
 
   users.forEach(async(user) => {
@@ -38,7 +39,6 @@ exports.seed = async function (knex) {
       }
       return Object.assign(userTodoDetails, baseItem)
     })
-    await knex(TODOS)
-      .insert(userTodos)
+    await knex(TODOS).insert(userTodos)
   });
 };
