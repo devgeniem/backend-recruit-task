@@ -12,6 +12,7 @@
     "sourceMap": true
   },
   "include": [
+    "knexfile.js",
     "src/**/*"
   ],
   "exclude": [
