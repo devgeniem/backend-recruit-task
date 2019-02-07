@@ -1,5 +1,4 @@
-const USERS = 'users'
-const TODOS = 'todos'
+const {USER_TABLE, TODO_TABLE} = require('./../constants/tables')
 
 const TODO_LIST = [
   {
@@ -28,10 +27,10 @@ const USER_LIST = [
 ];
 
 exports.seed = async function (knex) {
-  await knex(USERS).insert(USER_LIST);
-  const users = await knex(USERS).select('*')
+  await knex(USER_TABLE).insert(USER_LIST);
+  const users = await knex(USER_TABLE).select('*')
 
-  users.forEach(async(user) => {
+  const promises = users.map( async(user) => {
     const userTodos = TODO_LIST.map(baseItem => {
       const userTodoDetails = {
         userId: user.id,
@@ -39,6 +38,8 @@ exports.seed = async function (knex) {
       }
       return Object.assign(userTodoDetails, baseItem)
     })
-    await knex(TODOS).insert(userTodos)
+    return knex(TODO_TABLE).insert(userTodos)
   });
+  await Promise.all(promises)
+  console.log('seed done')
 };
