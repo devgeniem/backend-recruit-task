@@ -47,6 +47,6 @@ The endpoint should create the todo list row and all the children todo-items. Re
 TODO user id?
 
 ## optional considerations
-The folder structure of the app doesn't scale particulary well. Restructure the app as you see fit in a manner that would suit production - grade application with significantly more features.
+The folder structure of the app doesn't scale particularly well. Restructure the app as you see fit in a manner that would suit production - grade application with significantly more features.
 
 
