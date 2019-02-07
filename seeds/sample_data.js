@@ -30,7 +30,7 @@ exports.seed = async function (knex) {
   await knex(USER_TABLE).insert(USER_LIST);
   const users = await knex(USER_TABLE).select('*')
 
-  const promises = users.map( async(user) => {
+  const promises = users.map( user => {
     const userTodos = TODO_LIST.map(baseItem => {
       const userTodoDetails = {
         userId: user.id,

@@ -25,12 +25,10 @@ Create a migration that handles the existing data in such manner that each user 
 Use the [knex cli migrations](https://knexjs.org/#Migrations) for this job. The main app entrypoint does the migration for you already, feel free to disable this if you want to use the cli only. 
 
 ## endpoint for creating lists
-Create an endpoint that takes input along the lines of 
-
+Create an endpoint that takes following json input:
 ```json
 {
   title: "Saturday chores",
-  userId: 1,
   todoItems: [
     {
       title: "Take out the trash"
@@ -42,3 +40,6 @@ Create an endpoint that takes input along the lines of
   ]
 }
 ```
+The endpoint should create the todo list row and all the children todo-items. Read up on [objection.js](http://vincit.github.io/objection.js/) ORM on how achieve this.
+
+
