@@ -4,7 +4,7 @@
   "description": "Recruitment task for Geniem: A simple todo app REST api",
   "main": "app.js",
   "scripts": {
-    "setup": "npm install && knex migrate:latest && knex seed:run",
+    "setup": "npm install && npm run clean && knex migrate:latest && knex seed:run",
     "test": "echo \"Tests have not been setup yet!\" && exit 0",
     "clean": "rimraf todos.db build",
     "lint": "tslint -p tsconfig.json -c tslint.json",
