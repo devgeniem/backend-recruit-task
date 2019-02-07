@@ -17,6 +17,8 @@ Make sure you have [NodeJS](https://nodejs.org/en/) and Git installed.
 
 # goals
 
+## TODO AUTENTIKOINI
+
 ## change the data relationship
 Currently each todo - item is related to the user. Create a new table that represents todo-lists so that the existing todo - items belong to todo-lists instead of the user. 
 
@@ -41,6 +43,8 @@ Create an endpoint that takes following json input:
 }
 ```
 The endpoint should create the todo list row and all the children todo-items. Read up on [objection.js](http://vincit.github.io/objection.js/) ORM on how achieve this.
+
+TODO user id?
 
 ## optional considerations
 The folder structure of the app doesn't scale particulary well. Restructure the app as you see fit in a manner that would suit production - grade application with significantly more features.
