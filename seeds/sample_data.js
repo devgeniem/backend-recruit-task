@@ -2,11 +2,11 @@ const {USER_TABLE, TODO_TABLE} = require('./../constants/tables')
 
 const TODO_LIST = [
   {
-    title: "Osta leipää"
+    title: "Buy bread"
   }, {
-    title: "Maksa vuokra"
+    title: "Pay rent"
   }, {
-    title: "Käytä koiraa pihalla"
+    title: "Take the dog for a walk"
   }
 ];
 
