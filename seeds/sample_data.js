@@ -34,7 +34,7 @@ exports.seed = async function (knex) {
     const userTodos = TODO_LIST.map(baseItem => {
       const userTodoDetails = {
         userId: user.id,
-        description: `${user.name} muista: ${baseItem.title}`
+        description: `${user.name} remember: ${baseItem.title}`
       }
       return Object.assign(userTodoDetails, baseItem)
     })
