@@ -42,4 +42,7 @@ Create an endpoint that takes following json input:
 ```
 The endpoint should create the todo list row and all the children todo-items. Read up on [objection.js](http://vincit.github.io/objection.js/) ORM on how achieve this.
 
+## optional considerations
+The folder structure of the app doesn't scale particulary well. Restructure the app as you see fit in a manner that would suit production - grade application with significantly more features.
+
 
