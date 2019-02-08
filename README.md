@@ -33,6 +33,16 @@ Here are some things you should probably consider
 
 If and when you need to modify the relations, you should probably create a new [knex migration](https://knexjs.org/#Migrations).
 
+---
+**NOTE about scope and JWTs!**
+
+Please note that you're not required to come up with a production-ready authentication/authorization system. A simple system will do.
+For example, you're not required to store a user's token history or provide token renewal methods or anything like that. It is sufficient
+that the API can issue an access token in exchange of a user's credentials, and then it's the client's responsibility to keep that
+token for further use.
+
+---
+
 ## Criteria
 There are of course many ways you can perform the required task, and you should feel free to use one that you like. However,
 the overall cleanliness (architecture and code) of the solution should be considered important.
