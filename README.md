@@ -53,6 +53,7 @@ These aren't in any way necessary, but extra points are awarded for the followin
 
 1. Create a TodoList model, that the Todos are attached to (and the TodoList is then attached to a User).
 1. Create an endpoint where an entire TodoList can be created at once (with all its Todos).
+1. Host this in heroku or similar platform as a service - provider
 
 
 # Readings
@@ -61,3 +62,8 @@ These aren't in any way necessary, but extra points are awarded for the followin
 1. [Objection.js](https://vincit.github.io/objection.js/).
 1. [Json Web Tokens](jwt.io)
 1. [knex.js](https://knexjs.org/).
+
+# returning your work
+
+To return your work for evaluation, either provide us with a github - link or just email the project back in a zip file.
+
