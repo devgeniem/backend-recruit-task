@@ -1,8 +1,10 @@
-import registerApi from './api';
+require('dotenv').config();
+
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as Knex from 'knex';
 import * as morgan from 'morgan';
+import registerApi from './api';
 import { Model } from 'objection';
 import { HttpError } from './Errors';
 
