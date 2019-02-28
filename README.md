@@ -44,8 +44,7 @@ token for further use.
 ---
 
 ## Criteria
-There are of course many ways you can perform the required task, and you should feel free to use one that you like. However,
-the overall cleanliness (architecture and code) of the solution should be considered important.
+There are of course many ways you can perform the required task, and you should feel free to use one that you like. However, the core task itself is really quite straightforward. So the judgement is made based mostly on the overall cleanliness (architecture and code) of the solution.
 
 ## Extras
 
