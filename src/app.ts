@@ -4,8 +4,8 @@ import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as Knex from 'knex';
 import * as morgan from 'morgan';
-import registerApi from './api';
 import { Model } from 'objection';
+import registerApi from './api';
 import { HttpError } from './Errors';
 
 // Initialize knex the SQL query builder.
@@ -29,7 +29,7 @@ const app = express()
 // Register our REST API.
 registerApi(router);
 
-app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   if (err) {
     if (err instanceof HttpError) {
       res.status(err.statusCode).send({
