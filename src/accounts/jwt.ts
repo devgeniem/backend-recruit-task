@@ -3,6 +3,10 @@ import * as jwt from 'jsonwebtoken';
 const HOUR = 3600;
 const SECRET = process.env.JWT_SIGNING_SECRET;
 
+if (!SECRET) {
+  throw new Error('JWT secret not provided.');
+}
+
 const getSecondsNow = (): number => Math.floor(new Date().getTime() / 1000);
 
 /**

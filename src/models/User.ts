@@ -1,6 +1,5 @@
 import { Model } from 'objection';
 import { tables } from '../../constants';
-import { join } from 'path';
 
 export default class User extends Model {
   static tableName = tables.USER_TABLE;

@@ -1,7 +1,7 @@
 import * as express from 'express';
-import User from './models/User';
-import Todo from './models/Todo';
 import { BadRequestError, NotFoundError } from './Errors';
+import Todo from './models/Todo';
+import User from './models/User';
 
 export default (router: express.Router) => {
   router.get('/users', async (req, res) => {
@@ -14,7 +14,7 @@ export default (router: express.Router) => {
     res.send(todos);
   });
 
-  router.get('/todos/:id', async (req, res) => {
+  router.get('/todos/:id', async (req) => {
     const id = req.query.id;
     if (!id || Number.isInteger(id)) throw new BadRequestError('Invalid TodoID!');
 

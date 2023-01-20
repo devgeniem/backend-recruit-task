@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -9,6 +10,7 @@
     "removeComments": false,
     "noImplicitAny": false,
     "allowJs": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true
   },
   "include": [
